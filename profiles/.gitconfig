@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	name = relnaggar
+	email = ramsey.el-naggar@outlook.com
+[alias]
+	st = status -bs
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
