@@ -1,1 +1,3 @@
-# .profiles
+# .dotfiles
+
+My macOS configuration files.
