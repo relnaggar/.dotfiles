@@ -27,9 +27,10 @@ filetype plugin indent on    " required
 "
 " Brief help
 " :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginInstall    - installs plugins
+" :PluginUpdate     - updates plugins
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginClean      - confirms removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -45,7 +46,7 @@ colorscheme badwolf
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufRead Dockerfile.* set syntax=dockerfile
-autocmd FileType sh setlocal textwidth=80 colorcolumn=+0
+set colorcolumn=80
 
 " spaces and tabs
 set shiftwidth=2 " affects shift commands
@@ -84,7 +85,8 @@ set incsearch " search as characters are entered
 set hlsearch " highlight matches
 
 " autohighlights the word under the cursor
-autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/',
+  \ escape(expand('<cword>'), '/\'))
 
 """""""""""""""""""""""""""""""""""""
 " MAPPINGS
@@ -133,7 +135,10 @@ set ttimeoutlen=100
 """""""""""""""""""""""""""""""""""""
 " VIMWIKI
 """""""""""""""""""""""""""""""""""""
-let g:vimwiki_list = [{'path': '/Users/ramsey/Library/CloudStorage/GoogleDrive-ramsey144@gmail.com/My\ Drive/now/'}] " path of the default wiki <Leader>ww
+" path of the default wiki <Leader>ww
+let g:vimwiki_list = [{'path':
+  \ '/Users/ramsey/Library/CloudStorage/GoogleDrive-ramsey144@gmail.com/My\ Drive/now/'
+  \ }] 
 
 """""""""""""""""""""""""""""""""""""
 " YANKSTACK

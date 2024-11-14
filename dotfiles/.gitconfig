@@ -1,10 +1,10 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [user]
-	name = relnaggar
-	email = ramsey.el-naggar@outlook.com
+  name = relnaggar
+  email = ramsey.el-naggar@outlook.com
 [alias]
-	st = status -bs
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  st = status -bs
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   b = branch -avv
 
