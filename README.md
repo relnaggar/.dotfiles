@@ -1,3 +1,3 @@
 # .dotfiles
 
-My macOS configuration files.
+⚙️ My macOS configuration files
